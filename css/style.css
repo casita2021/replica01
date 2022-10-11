@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    margin: 0;
+    border:0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.head {/*aca esta la nav*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*espacios entre los elementos*/
+    height: 63px;
+    background: #171717;
+    position: fixed; /*hace que quede fijo*/
+    width: 100%;
+    z-index: 100; /*elemento se sobrepone sobre los demas elementos*/
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;/*separa los enlaces*/
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.logo a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    color:#fff;
+}
+
+.navbar a {/*afecto a los link*/
+    display: block;/*elemento de bloque, verticalmente a continiacion uno del otro, si no declaro alto y ancho toma el alto y el ancho de su contenido*/
+    padding: 20px 20px;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;/*mayuscula*/
+    font-size: 20px;/*tamano de la letras link*/
+}
+
+.navbar a:hover {/*esto cambie el color si pasas sobre los link*/
+    background: #e91e63;
+}
+
+.header {
+    display: flex;
+    justify-content: center;/*centra de manera horizontal*/
+    align-items: center;/*centra de manera vertical*/
+    height: 60vh;
+    background: url(../img/header.jpg) no-repeat center;
+    background-size: cover;/*que esta de fondo*/
+}
+
+/*estilo de los titulos*/
+.title {
+    margin-bottom: 40px;/*esapcio asi abajo de =l titulo*/
+    font-size: 60px;
+    font-weight: 600;/*grosor de la letra*/
+    text-transform: uppercase;/*todos con mayuscula*/
+    color:#fff;
+}
+
+p {
+    margin-bottom: 40px;/*espacio abajo de los parrafos*/
+    font-size: 18px;
+    color:#fff;
+    padding: 0 150px;/*cero arriba y 100 en izquierda y derecha*/
+
+}
+
+.btn { /*estilos del boton*/
+    display: inline-block;/*elementos no toman las medidas, se ordenan de manera horizontal*/
+    margin-top: 15px;/*espacio asi arribe desde adentro del boton*/
+    padding: 10px 40px;/*espacioa asi afuera del boton*/
+    border: 2px solid #e91e63;
+    color:#fff;
+    text-decoration: none;/*saca la linea del link*/
+    background: #e91e63;/*color de fond del boton*/
+}
+
+.btn:hover {
+    background: none;/*esto va a quitar el color de fondo cuando pase el mouse por arriba*/
+}
+
+/*estilo de las secciones*/
+.content{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;/*se ordenan asi abajo*/
+    align-items: center;/*centra los elementos*/
+    justify-content: center;/*centra el ocntenedor*/
+}
+
+.sau{
+    padding: 50px 0;
+    background: #303030;/*color gris oscuro*/
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/*hace que los elementos se acoden en columna*/
+    text-align: center;
+}
+
+/*esto afecta a los div contenidos por el div container*/
+.box-container .box{
+    height: 170px;
+    width: 270px;
+    background: #171717;
+    text-align: center;
+    border-radius: 20px;/*en cada div redondea las puntas*/
+    box-shadow: 0 5px 5px rgba(0,0,0, .3);
+    margin: 20px;/*espacio a los 4 lados de cada div*/
+}
+
+.box-container .box i{/*esto afecta a la etiqueta i dentro de los div*/
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color:#fff;
+    background: #e91e63;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color:#e91e63;
+}
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+/*estilos de about*/
+.price {
+    background: url(../img/costos.jpg) no-repeat center;
+    background-size: cover;/*imegen de fondo*/
+    background-attachment: fixed;/*img queda fija*/
+    text-align: center;
+}
+
+.about {
+    background:#303030;
+    padding: 50px 0;
+}
+
+.box-container2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    flex-wrap: wrap;/*cuando sea responsive se ordenan uno debajo de otro*/
+}
+
+.box-container2 .box{
+    width: 250px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+    background: #171717;
+    margin: 20px 20px;
+}
+
+.box-container2 .box img{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;/*cubre el fondo*/
+    border-radius: 50%;
+    margin-top: -50px;/*para que se vea fuera del cuadro*/
+    border: 6px solid #e91e63;
+}
+
+.box-container2 .box h3{
+    font-size: 20px;
+    color:#e91e63;
+    padding-top: 10px;
+}
+
+.box-container2 .box p { 
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+}
+
+.box-container2 .box .stars i{
+    font-size: 15px;
+    color:#e91e63;
+}
+
+.contact {
+    padding: 50px 0;
+    background: #171717;
+}
+
+.footer-section {
+    display: flex;
+}
+
+.f-enlaces {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+}
+
+.f-enlaces a{
+    color:#fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+@media(max-width: 768px){
+    p{
+        padding: 0 50px;
+    }
+    .title{
+        margin-bottom: 0px;
+        font-size: 40px;
+    }
+
+    .sau{
+        height: 100vh;
+        padding: 50px 0;
+    }
+
+    .about{
+        height: 100vh;
+        padding: 50px 0;
+    }
+
+    .footer-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .f-enlaces{
+        display: none;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+}
